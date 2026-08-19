@@ -1,311 +1,316 @@
-# Reductor cilindric cu o treaptă — RCil H
+# Single-Stage Helical Gear Reducer — RCil H
 
-**Proiect de an la disciplina Organe de Mașini**
-Universitatea Transilvania din Brașov · Facultatea de Inginerie Mecanică
-Departamentul Autovehicule și Transporturi · 2026
+**Year project — Machine Elements (Organe de Mașini)**
+Transilvania University of Brașov · Faculty of Mechanical Engineering
+Department of Automotive and Transport Engineering · 2026
 
-Proiectarea completă a unui reductor de turație cu o treaptă, cu angrenaj cilindric cu dantură
-înclinată și plan orizontal al axelor (varianta **RCil H**): de la tema de proiectare și calculul
-analitic, prin modelarea 3D în CATIA V5 și verificarea în MDESIGN, până la desenul de ansamblu și
-desenele de execuție.
+The complete design of a single-stage speed reducer with a helical cylindrical gear pair and a
+horizontal shaft plane (the **RCil H** variant): from the design brief and the analytical
+calculations, through 3D modelling in CATIA V5 and verification in MDESIGN, to the assembly drawing
+and the detail drawings.
 
 | | |
 |---|---|
-| **Autor** | Horia-Eusebiu ȘTEFAN — Programul de studii Robotică, grupa 4LF832 |
-| **Coordonatori** | Prof. univ. dr. ing. Gheorghe MOGAN · Dr. ing. Eugen BUTILĂ · Drd. ing. Diana BUZDUGAN |
-| **Software** | CATIA V5 (modelare 3D, desene), MDESIGN 2020 (verificare arbori) |
-| **Documentație** | [Memoriu tehnic (PDF, 47 pagini)](docs/Memoriu-Tehnic-Stefan-Horia-Eusebiu.pdf) |
+| **Author** | Horia-Eusebiu ȘTEFAN — Robotics programme, group 4LF832 |
+| **Supervisors** | Prof. dr. eng. Gheorghe MOGAN · Dr. eng. Eugen BUTILĂ · Eng. Diana BUZDUGAN |
+| **Software** | CATIA V5 (3D modelling, drawings), MDESIGN 2020 (shaft verification) |
+| **Documentation** | [Technical report (PDF, 47 pages, Romanian)](docs/Memoriu-Tehnic-Stefan-Horia-Eusebiu.pdf) |
+
+> 🇷🇴 Documentul în limba română: [README.ro.md](README.ro.md)
 
 ---
 
-## 1. Tema de proiectare
+## 1. Design brief
 
-| Parametru | Simbol | Valoare |
+| Parameter | Symbol | Value |
 |---|---|---|
-| Puterea la intrare | `P_i` | 17,5 kW |
-| Turația la intrare | `n_i` | 3000 rot/min |
-| Raportul de transmitere | `i_R` | 3 |
-| Durata de funcționare impusă | `L_h imp` | 12 000 ore |
-| Planul axelor | `PA` | Orizontal (H) |
-| Numărul de dinți ai pinionului | `z_1` | 19 |
+| Input power | `P_i` | 17.5 kW |
+| Input speed | `n_i` | 3000 rpm |
+| Transmission ratio | `i_R` | 3 |
+| Required service life | `L_h imp` | 12,000 hours |
+| Shaft plane | `PA` | Horizontal (H) |
+| Number of pinion teeth | `z_1` | 19 |
 
-**Condiții de funcționare:** utilaj de tip elevator auto sau stand de testare frâne; încărcare
-exterioară alternativă cu șocuri; acționare cu motor electric asincron cu rotorul în scurtcircuit;
-nivel de zgomot max. 25 dB; mediu −20…60 °C, umiditate max. 30 g/m³.
+**Operating conditions:** vehicle lift or brake test bench; alternating external load with shocks;
+driven by a squirrel-cage asynchronous electric motor; noise level max. 25 dB; environment
+−20…60 °C, humidity max. 30 g/m³.
 
-**Condiții constructive:** intrare și ieșire pe părți opuse, arbore de ieșire plin.
+**Construction constraints:** input and output on opposite sides, solid output shaft.
 
 ---
 
-## 2. Parametri cinetostatici
+## 2. Kinetostatic parameters
 
-| Arborele | Puterea | Turația | Momentul de torsiune |
+| Shaft | Power | Speed | Torque |
 |---|---|---|---|
-| Intrare (A1) | `P_1` = 17,5 kW | `n_1` = 3000 rot/min | `M_t1` = 55 704 Nmm |
-| Ieșire (A2) | `P_2` = 16,62 kW | `n_2` = 1000 rot/min | `M_t2` = 158 756 Nmm |
+| Input (A1) | `P_1` = 17.5 kW | `n_1` = 3000 rpm | `M_t1` = 55,704 Nmm |
+| Output (A2) | `P_2` = 16.62 kW | `n_2` = 1000 rpm | `M_t2` = 158,756 Nmm |
 
-Randamentul angrenajului cilindric considerat: `η` = 0,95.
-Numere de dinți: `z_1` = 19, `z_2` = 57 → raport recalculat `u` = 3, abatere față de `i_R` = **0 %**.
+Assumed gear efficiency: `η` = 0.95.
+Tooth counts: `z_1` = 19, `z_2` = 57 → recalculated ratio `u` = 3, deviation from `i_R` = **0 %**.
 
 ---
 
-## 3. Angrenajul cilindric
+## 3. The helical gear pair
 
-### Material și tratament termic
+### Material and heat treatment
 
-Deoarece `M_t1` = 55 704 Nmm > 30 000…40 000 Nmm, s-a adoptat pentru ambele roți un **oțel de
-cementare, 20TiMnCr12**.
+Since `M_t1` = 55,704 Nmm > 30,000…40,000 Nmm, a **case-hardening steel, 20TiMnCr12**, was adopted
+for both wheels.
 
-| `σ_c` | `σ_r` | Tratament | Duritate flanc | Duritate miez | `σ_Hlim` | `σ_Flim` |
+| `σ_c` | `σ_r` | Treatment | Flank hardness | Core hardness | `σ_Hlim` | `σ_Flim` |
 |---|---|---|---|---|---|---|
-| 850 MPa | 1100 MPa | Cementare | 60 HRC | 340 HB | 1530 MPa | 430 MPa |
+| 850 MPa | 1100 MPa | Carburising | 60 HRC | 340 HB | 1530 MPa | 430 MPa |
 
-Prelucrare: frezare înainte de cementare, rectificare după călire și revenire.
+Manufacturing: milling before carburising, grinding after quenching and tempering.
 
-### Predimensionare și geometrie
+### Preliminary sizing and geometry
 
-Modulul frontal calculat: `m_c` = max(`m_H`, `m_F`) = max(1,89 ; 1,82) = **1,89 mm** → solicitarea
-de contact este solicitarea principală.
+Calculated transverse module: `m_c` = max(`m_H`, `m_F`) = max(1.89 ; 1.82) = **1.89 mm** → contact
+stress is the governing criterion.
 
-| Parametru | Relație | Valoare |
+| Parameter | Relation | Value |
 |---|---|---|
-| Modulul normal (standardizat) | `m_n` | 2 mm |
-| Modulul frontal | `m = m_n / cos β` | 1,889 mm |
-| Unghiul de înclinare a danturii | `β` | 14° |
-| Diametrul de divizare pinion | `d_1 = m·z_1` | 35,9 mm |
-| Diametrul de divizare roată | `d_2 = m·z_2` | 107,673 mm |
-| Distanța dintre axe de referință | `a` | 78,32 mm |
-| **Distanța dintre axe standardizată** | `a_w` | **80 mm** |
-| Lățimea danturii roții | `b_2` | 27 mm |
-| Lățimea danturii pinionului | `b_1 = b_2 + 4…6` | 31 mm |
+| Normal module (standardised) | `m_n` | 2 mm |
+| Transverse module | `m = m_n / cos β` | 1.889 mm |
+| Helix angle | `β` | 14° |
+| Pinion reference diameter | `d_1 = m·z_1` | 35.9 mm |
+| Wheel reference diameter | `d_2 = m·z_2` | 107.673 mm |
+| Reference centre distance | `a` | 78.32 mm |
+| **Standardised centre distance** | `a_w` | **80 mm** |
+| Wheel face width | `b_2` | 27 mm |
+| Pinion face width | `b_1 = b_2 + 4…6` | 31 mm |
 
-Restricția de standardizare `−0,5·m_n < a_w − a ≤ m_n` → `−1 < 1,68 ≤ 2` ✔
+Standardisation constraint `−0.5·m_n < a_w − a ≤ m_n` → `−1 < 1.68 ≤ 2` ✔
 
-### Deplasări de profil (angrenaj PLUS)
+### Profile shift (PLUS gearing)
 
-Pentru a asigura distanța dintre axe impusă și rezistențe mărite la contact și încovoiere:
+To achieve the required centre distance together with improved contact and bending strength:
 
-| `x_n1` | `x_n2` | `x_ns` | `α` (presiune frontal) | `α_w` (angrenare frontal) |
+| `x_n1` | `x_n2` | `x_ns` | `α` (transverse pressure) | `α_w` (transverse working) |
 |---|---|---|---|---|
-| +0,4711 | +0,4278 | 0,899 | 20,5617° | 23,561° |
+| +0.4711 | +0.4278 | 0.899 | 20.5617° | 23.561° |
 
-Verificarea ascuțirii dinților (măsurată pe modelul CATIA):
-`s_1` = 0,433 mm, `s_2` = 0,973 mm > (0,3…0,45)·`m_n`/2 ✔
+Tooth tip thickness check (measured on the CATIA model):
+`s_1` = 0.433 mm, `s_2` = 0.973 mm > (0.3…0.45)·`m_n`/2 ✔
 
-### Continuitatea angrenării
+### Contact continuity
 
-Gradul de acoperire frontal, obținut prin măsurare pe modelul CATIA de simulare:
-`ε_αm` = (T₁B − T₁A) / `p_b` = (12,884 − 4,589) / 6,043 = **1,372**
-față de valoarea calculată `ε_α` = **1,381** → abatere **−0,65 %** ✔
+Transverse contact ratio, obtained by measurement on the CATIA simulation model:
+`ε_αm` = (T₁B − T₁A) / `p_b` = (12.884 − 4.589) / 6.043 = **1.372**
+against the calculated value `ε_α` = **1.381** → deviation **−0.65 %** ✔
 
-### Execuție și montaj
+### Manufacturing and assembly
 
 | | |
 |---|---|
-| Treapta de precizie / ajustaj | 8 / B, toleranța jocului tip *b* |
-| Procedeu de prelucrare final | Frezare îngrijită și mortezare |
-| Rugozități | flanc `Ra` = 0,8 μm · racordare `Ra` = 1,6 μm |
-| Lubrifiant | ulei de transmisii TIN 300 EP |
-| Joc minim normal | `j_n min` = 87 μm |
-| Toleranțe bătaie radială | `F_r` = 45 μm (pinion) · 63 μm (roată) |
-| Cota peste dinți | 19,85 ⁻⁰·¹ ⁻⁰·¹⁶ peste 3 dinți (pinion) · 66,28 ⁻⁰·¹⁸ ⁻⁰·²⁸ peste 9 dinți (roată) |
-| Abateri limită distanță între axe | `f_a` = ±70 μm |
+| Accuracy grade / fit | 8 / B, backlash tolerance type *b* |
+| Final machining process | Careful milling and slotting |
+| Surface roughness | flank `Ra` = 0.8 μm · root fillet `Ra` = 1.6 μm |
+| Lubricant | TIN 300 EP transmission oil |
+| Minimum normal backlash | `j_n min` = 87 μm |
+| Radial runout tolerances | `F_r` = 45 μm (pinion) · 63 μm (wheel) |
+| Span measurement | 19.85 ⁻⁰·¹ ⁻⁰·¹⁶ over 3 teeth (pinion) · 66.28 ⁻⁰·¹⁸ ⁻⁰·²⁸ over 9 teeth (wheel) |
+| Centre distance limit deviations | `f_a` = ±70 μm |
 
-### Forțe în angrenaj
+### Gear mesh forces
 
-| `F_t` (tangențială) | `F_r` (radială) | `F_a` (axială) |
+| `F_t` (tangential) | `F_r` (radial) | `F_a` (axial) |
 |---|---|---|
-| 2785,2 N | 1213,94 N | 694,43 N |
+| 2785.2 N | 1213.94 N | 694.43 N |
 
 ---
 
-## 4. Arbori, rulmenți și pene
+## 4. Shafts, bearings and keys
 
-### Arbori
+### Shafts
 
-| | Arbore de intrare (A1) | Arbore de ieșire (A2) |
+| | Input shaft (A1) | Output shaft (A2) |
 |---|---|---|
-| Material | 20TiMnCr12 (corp comun cu pinionul) | C60 |
-| Tratament | Cementare, 55…63 HRC | Îmbunătățire, 200…300 HB |
+| Material | 20TiMnCr12 (integral with the pinion) | C60 |
+| Treatment | Carburised, 55…63 HRC | Quenched and tempered, 200…300 HB |
 | `σ_c` / `σ_r` | 850 / 1100 MPa | 720 / 420 MPa |
-| Moment de torsiune | 55 704 Nmm | 158 756 Nmm |
-| `τ_at` admisibil | 25 MPa | 35 MPa |
-| Diametru calculat | 22,47 mm | 28,48 mm |
-| **Cap de arbore standardizat** | **⌀22 × 36 mm** | **⌀28 × 42 mm** |
+| Torque | 55,704 Nmm | 158,756 Nmm |
+| Allowable `τ_at` | 25 MPa | 35 MPa |
+| Calculated diameter | 22.47 mm | 28.48 mm |
+| **Standardised shaft end** | **⌀22 × 36 mm** | **⌀28 × 42 mm** |
 
-### Rulmenți
+### Bearings
 
-Din considerente de încărcare cu forțe radiale medii și axiale mici s-au adoptat **rulmenți radiali
-cu bile**.
+Given moderate radial and small axial loads, **deep groove ball bearings** were adopted.
 
-| Arborele | Simbol | `d` | `D` | `B` | `C` |
+| Shaft | Designation | `d` | `D` | `B` | `C` |
 |---|---|---|---|---|---|
-| De intrare | 6205 | 35 mm | 72 mm | 17 mm | 25 500 N |
-| De ieșire | 6213 | 45 mm | 85 mm | 19 mm | 31 000 N |
+| Input | 6205 | 35 mm | 72 mm | 17 mm | 25,500 N |
+| Output | 6213 | 45 mm | 85 mm | 19 mm | 31,000 N |
 
-Diametrul tronsonului de sub roata cilindrică: `d_A2r` = `d_R2` + 10 = **55 mm**.
+Diameter of the seat under the gear wheel: `d_A2r` = `d_R2` + 10 = **55 mm**.
 
-### Asamblări cu pene paralele
+### Parallel key joints
 
-Material pene: **E295** (`σ_02` = 295 MPa, `σ_as` = 70…120 MPa, `τ_af` = 60…80 MPa).
+Key material: **E295** (`σ_02` = 295 MPa, `σ_as` = 70…120 MPa, `τ_af` = 60…80 MPa).
 
-| | Pana I (tip A) | Pana II (tip A) | Pana III (tip C) |
+| | Key I (type A) | Key II (type A) | Key III (type C) |
 |---|---|---|---|
 | `d` | 22 mm | 55 mm | 28 mm |
 | `b × h` | 6 × 6 | 16 × 10 | 8 × 7 |
-| `l_c` calculat | 21,1 mm | 11,5 mm | 32,4 mm |
-| `l` adoptat (STAS) | 28 mm | 45 mm | 50 mm |
+| Calculated `l_c` | 21.1 mm | 11.5 mm | 32.4 mm |
+| Adopted `l` (STAS) | 28 mm | 45 mm | 50 mm |
 
-Pentru toate cele trei asamblări `l_c` < lungimea disponibilă → se adoptă câte **o singură pană**.
-
----
-
-## 5. Verificări
-
-### Arborele de intrare (MDESIGN 2020, modul *Shaft*)
-
-| Verificarea | Criteriu | Rezultat |
-|---|---|---|
-| Solicitări compuse | `S_F min` ≥ 1,2 | **17,412** ✔ |
-| Oboseală | `S_D min` ≥ 1,2 | **1,98** ✔ |
-| Săgeată în zona angrenajului | `y_x` ≤ 0,04…0,12 mm | ✔ |
-| Săgeată maximă | `y_max` ≤ 0,0452 mm | **0,035099 mm** ✔ |
-| Rotiri maxime în lagăre | `Θ_max` ≤ 0,97° | **0,0024505°** ✔ |
-| Vibrații torsionale | `(0…n)` ≠ `(0,8…1,2)·f_0` | ✔ |
-| Vibrații flexionale | `(0…n)` ≠ `(0,8…1,2)·f_0` | ✔ |
-
-Raportul complet: [`mdesign/Raport-MDESIGN-Shaft-arbore-intrare.pdf`](mdesign/Raport-MDESIGN-Shaft-arbore-intrare.pdf)
-Fișierul sursă de calcul: [`mdesign/Horia-verifdate.mdp.txt`](mdesign/Horia-verifdate.mdp.txt)
-
-### Rulmenții arborelui de intrare (6205)
-
-Forțe exterioare: `F_rA` = 1871,70 N, `F_rB` = 2251,93 N, `F_a1` = ±694,42 N.
-Factori de influență (`f_0·F_a/C_0r` = 0,276, joc radial normal CN): `e` = 0,28, `X` = 0,56, `Y` = 1,58.
-
-| Lagăr | `F_a1/F_r` | Sarcina dinamică echivalentă |
-|---|---|---|
-| `L_A` | 0,371 > `e` | `P_A` = 2145,33 N |
-| `L_B` | 0,308 > `e` | `P_B` = **2358,26 N** ← cel mai încărcat |
-
-Durabilitate: `L_B` = (C/P_B)³ = **1265,8 milioane de rotații** → `L_h` = **7032,2 ore**.
+For all three joints `l_c` < the available length → **a single key** is used in each case.
 
 ---
 
-## 6. Structura repository-ului
+## 5. Verification
+
+### Input shaft (MDESIGN 2020, *Shaft* module)
+
+| Check | Criterion | Result |
+|---|---|---|
+| Combined stresses | `S_F min` ≥ 1.2 | **17.412** ✔ |
+| Fatigue | `S_D min` ≥ 1.2 | **1.98** ✔ |
+| Deflection at the gear | `y_x` ≤ 0.04…0.12 mm | ✔ |
+| Maximum deflection | `y_max` ≤ 0.0452 mm | **0.035099 mm** ✔ |
+| Maximum bearing tilt | `Θ_max` ≤ 0.97° | **0.0024505°** ✔ |
+| Torsional vibration | `(0…n)` ≠ `(0.8…1.2)·f_0` | ✔ |
+| Bending vibration | `(0…n)` ≠ `(0.8…1.2)·f_0` | ✔ |
+
+Full report: [`mdesign/Raport-MDESIGN-Shaft-arbore-intrare.pdf`](mdesign/Raport-MDESIGN-Shaft-arbore-intrare.pdf)
+Calculation source file: [`mdesign/Horia-verifdate.mdp.txt`](mdesign/Horia-verifdate.mdp.txt)
+
+### Input shaft bearings (6205)
+
+External forces: `F_rA` = 1871.70 N, `F_rB` = 2251.93 N, `F_a1` = ±694.42 N.
+Influence factors (`f_0·F_a/C_0r` = 0.276, normal radial clearance CN): `e` = 0.28, `X` = 0.56,
+`Y` = 1.58.
+
+| Bearing | `F_a1/F_r` | Equivalent dynamic load |
+|---|---|---|
+| `L_A` | 0.371 > `e` | `P_A` = 2145.33 N |
+| `L_B` | 0.308 > `e` | `P_B` = **2358.26 N** ← most heavily loaded |
+
+Service life: `L_B` = (C/P_B)³ = **1265.8 million revolutions** → `L_h` = **7032.2 hours**.
+
+---
+
+## 6. Repository structure
 
 ```
 .
-├── cad/        modelele CATIA V5 (54 fișiere, nume păstrate pentru a nu rupe linkurile)
-├── docs/       memoriul tehnic (PDF + DOCX)
-├── date/       liste de componente și materiale, tabelul de parametri ai danturii
-└── mdesign/    raportul de verificare a arborelui de intrare
+├── cad/        the CATIA V5 models (54 files, names preserved so links do not break)
+├── docs/       the technical report (PDF + DOCX)
+├── date/       component and material lists, gear parameter table
+└── mdesign/    the input shaft verification report
 ```
 
 > [!IMPORTANT]
-> Toate fișierele CATIA sunt păstrate **plat, în `cad/`, cu numele originale**. Fișierele
-> `.CATProduct` și `.CATDrawing` rezolvă legăturile către componente pe bază de nume și cale
-> relativă — redenumirea sau mutarea lor în subfoldere rupe ansamblul la deschidere.
+> All CATIA files are kept **flat, inside `cad/`, under their original names**. The `.CATProduct`
+> and `.CATDrawing` files resolve their links to components by name and relative path — renaming
+> them or moving them into subfolders breaks the assembly on open.
 
-### Modele CATIA
+### CATIA models
 
-**Ansamblu și subansamble**
+**Assembly and subassemblies**
 
-| Fișier | Conținut |
+| File | Content |
 |---|---|
-| `Ansamblu H.CATProduct` | Ansamblul general al reductorului RCil H |
-| `Subansamblu arbore de intrare.CATProduct` | Arbore-pinion + rulmenți 6205 + capace + manșetă |
-| `Subansamblu arbore de iesire.CATProduct` | Arbore de ieșire + roată + rulmenți 6213 + distanțier |
-| `Subansamblue angrenaj.CATProduct` | Angrenajul cilindric complet |
-| `Subansamblu Carcasa Inferioara.CATProduct` | Carcasa inferioară cu accesorii |
-| `Subansamblu Carcasa Superioara.CATProduct` | Carcasa superioară cu vizor, bușon, capac de vizitare |
-| `Model Cinematic RCil.CATProduct` | Model pentru simularea cinematică a mecanismului |
-| `Test carcase.CATProduct` | Verificare de potrivire a celor două carcase |
+| `Ansamblu H.CATProduct` | General assembly of the RCil H reducer |
+| `Subansamblu arbore de intrare.CATProduct` | Pinion shaft + 6205 bearings + covers + seal |
+| `Subansamblu arbore de iesire.CATProduct` | Output shaft + wheel + 6213 bearings + spacer |
+| `Subansamblue angrenaj.CATProduct` | The complete helical gear pair |
+| `Subansamblu Carcasa Inferioara.CATProduct` | Lower housing with accessories |
+| `Subansamblu Carcasa Superioara.CATProduct` | Upper housing with sight glass, breather, inspection cover |
+| `Model Cinematic RCil.CATProduct` | Model for the kinematic simulation of the mechanism |
+| `Test carcase.CATProduct` | Fit check between the two housing halves |
 
-**Studii de angrenare** (cap. 3 din memoriu)
+**Meshing studies** (chapter 3 of the report)
 
-| Fișier | Conținut |
+| File | Content |
 |---|---|
-| `CATPart.3.3.3.2.1 Model dinti in angrenare.CATPart` | Profilele dinților roților **nedeplasate** |
-| `CATPart.3.3.3.2.1 Model dinti in angrenare deplasat.CATPart` | Angrenajul cu danturi **deplasate** (`x_n1` = +0,4711) |
-| `CATPart.3.3.3.2.2 Model pentru simulare si verificare angrenare.CATPart` | Simularea și verificarea continuității angrenării |
+| `CATPart.3.3.3.2.1 Model dinti in angrenare.CATPart` | Tooth profiles of the **unshifted** wheels |
+| `CATPart.3.3.3.2.1 Model dinti in angrenare deplasat.CATPart` | Gear pair with **profile-shifted** teeth (`x_n1` = +0.4711) |
+| `CATPart.3.3.3.2.2 Model pentru simulare si verificare angrenare.CATPart` | Simulation and verification of meshing continuity |
 
-**Piese principale**
+**Main parts**
 
-`CATPart.5.1.3 Arbore cu pinion cilindric` · `CAtPart.5.1.4 Arbore cu roata cilindrica` ·
-`CATPart.9.5 Arbore de iesire` · `CATPart.9.1 Coroana pinion cilindric` ·
-`CATPart.9.4 Coroana roata cilindrica` · `CATPart.11.1.1.1 Generare Carcasa inferioara H` ·
-`CATPart.11.1.2.1 Generare Carcasa superioara H`
+`CATPart.5.1.3 Arbore cu pinion cilindric` (pinion shaft) ·
+`CAtPart.5.1.4 Arbore cu roata cilindrica` (wheel shaft) ·
+`CATPart.9.5 Arbore de iesire` (output shaft) · `CATPart.9.1 Coroana pinion cilindric` (pinion rim) ·
+`CATPart.9.4 Coroana roata cilindrica` (wheel rim) ·
+`CATPart.11.1.1.1 Generare Carcasa inferioara H` (lower housing) ·
+`CATPart.11.1.2.1 Generare Carcasa superioara H` (upper housing)
 
-**Etanșare, accesorii și organe de asamblare**
+**Sealing, accessories and fasteners**
 
-Capace de rulment (1–4) · manșete de rotație · garnituri plate și de capac · bușon de aerisire ·
-dop de golire · vizor de nivel ulei · capac de vizitare · distanțier · pene paralele · știft de
-poziționare · șaibe Grower · șuruburi ISO 4017 / 4018 și piulițe ISO 4032.
+Bearing covers (1–4) · rotary seals · flat and cover gaskets · breather plug · drain plug · oil
+level sight glass · inspection cover · spacer · parallel keys · locating pin · Grower washers ·
+ISO 4017 / 4018 bolts and ISO 4032 nuts.
 
-### Desene
+### Drawings
 
-| Fișier | Conținut |
+| File | Content |
 |---|---|
-| `Ansamblu HH.CATDrawing` | Desenul de ansamblu al reductorului |
-| `Desen de executie Arbore de intrare cu pinion cilindric.CATDrawing` | Desen de execuție |
-| `Desen de executie Roata dintata cilindrica.CATDrawing` | Desen de execuție |
-| `Desen de executie arbore de iesire.CATDrawing` | Desen de execuție |
-| `Format si chenar desen de ansamblu.CATDrawing` | Formatul și chenarul folosit |
+| `Ansamblu HH.CATDrawing` | Assembly drawing of the reducer |
+| `Desen de executie Arbore de intrare cu pinion cilindric.CATDrawing` | Detail drawing — pinion shaft |
+| `Desen de executie Roata dintata cilindrica.CATDrawing` | Detail drawing — gear wheel |
+| `Desen de executie arbore de iesire.CATDrawing` | Detail drawing — output shaft |
+| `Format si chenar desen de ansamblu.CATDrawing` | Sheet format and border used |
 
-### Date
+### Data
 
-| Fișier | Conținut |
+| File | Content |
 |---|---|
-| [`date/lista-componente.csv`](date/lista-componente.csv) | Tabelul de componență (34 poziții) al desenului de ansamblu |
-| `date/lista-materiale.xls` | Lista de materiale |
-| [`date/tabel-parametri-danturi-pinion.csv`](date/tabel-parametri-danturi-pinion.csv) | Tabelul de parametri ai danturii, pentru desenul de execuție al pinionului |
+| [`date/lista-componente.csv`](date/lista-componente.csv) | Bill of materials (34 items) for the assembly drawing |
+| `date/lista-materiale.xls` | Material list |
+| [`date/tabel-parametri-danturi-pinion.csv`](date/tabel-parametri-danturi-pinion.csv) | Gear parameter table for the pinion detail drawing |
 
 ---
 
-## 7. Cum se deschid fișierele
+## 7. Opening the files
 
-1. **CATIA V5** (R2019 sau mai nou) — clonează repository-ul și deschide `cad/Ansamblu H.CATProduct`
-   păstrând toate fișierele în același folder.
-2. **MDESIGN 2020 Second Edition**, modulul *Shaft* v18.0.13e — încarcă
-   `mdesign/Horia-verifdate.mdp.txt` (fișier XML UTF-16 cu parametrii de calcul).
-3. Pentru citire fără licențe, memoriul tehnic în PDF conține toate capturile de ecran ale
-   modelelor, diagramelor și desenelor.
+1. **CATIA V5** (R2019 or newer) — clone the repository and open `cad/Ansamblu H.CATProduct`,
+   keeping all files in the same folder.
+2. **MDESIGN 2020 Second Edition**, *Shaft* module v18.0.13e — load
+   `mdesign/Horia-verifdate.mdp.txt` (a UTF-16 XML file holding the calculation parameters).
+3. To read the work without any licences, the PDF technical report contains screenshots of all
+   models, diagrams and drawings.
 
 ```bash
-git clone https://github.com/StefanHoria/reductor-cilindric-o-treapta.git
+git clone https://github.com/StefanHoria/Reductor-Cilindric.git
 ```
 
 ---
 
-## 8. Observații privind documentația
+## 8. Notes on the documentation
 
-Notate pentru transparență, fără a modifica valorile din memoriul tehnic original:
+Recorded for transparency, without altering the values in the original technical report:
 
-- **Cap. 13 — verificarea arborelui în MDESIGN**: textul preia parțial valorile din exemplul-șablon
-  al îndrumarului (`M_t1` = 312 071 Nmm, `n` = 625 rot/min, `F_t` = 8770,6 N, oțel 18MoMnNi13) în
-  loc de datele proprii ale proiectului (`M_t1` = 55 704 Nmm, `n_1` = 3000 rot/min, `F_t` = 2785,2 N,
-  20TiMnCr12). Coeficienții de siguranță raportați rămân cu marjă confortabilă.
-- **Cap. 14 — verificarea rulmenților**: durabilitatea calculată `L_h` = 7032,2 ore este comparată
-  în text cu 11 787,94 ore, iar inegalitatea scrisă (`7032,2 > 11 787,94`) nu se verifică numeric.
-  Față de durata impusă prin temă, `L_h imp` = 12 000 ore, rezultatul indică necesitatea unui rulment
-  cu capacitate dinamică mai mare pentru lagărul `L_B` al arborelui de intrare.
-- Cap. 6.5 menționează `m_n` = 2,5 mm în relația jocului minim și o distanță între axe de 180 mm în
-  personalizarea toleranțelor, în timp ce restul proiectului folosește `m_n` = 2 mm și `a_w` = 80 mm.
-
----
-
-## 9. Bibliografie
-
-1. Jula, A. ș.a. — *Organe de mașini*, vol. I, II. Universitatea din Brașov, 1986, 1989.
-2. Mogan, Gh. ș.a. — *Organe de mașini. Teorie – Proiectare – Aplicații*. Ed. Universității Transilvania din Brașov, 2012.
-3. Moldovean, Gh. ș.a. — *Angrenaje cilindrice și conice. Calcul și construcție*. Ed. LuxLibris, Brașov, 2001.
-4. Moldovean, Gh. ș.a. — *Angrenaje cilindrice și conice. Metodici de proiectare*. Ed. LuxLibris, Brașov, 2002.
-5. Rădulescu, C. — *Organe de mașini*, vol. I, II, III. Universitatea Transilvania din Brașov, 1985.
-6. \*\*\* — *Culegere de norme și extrase din standarde pentru proiectarea elementelor componente ale mașinilor*, vol. I, II. Universitatea din Brașov, 1984.
+- **Ch. 13 — shaft verification in MDESIGN**: the text partly carries over the values from the
+  worked example in the course guide (`M_t1` = 312,071 Nmm, `n` = 625 rpm, `F_t` = 8770.6 N, steel
+  18MoMnNi13) instead of this project's own data (`M_t1` = 55,704 Nmm, `n_1` = 3000 rpm,
+  `F_t` = 2785.2 N, 20TiMnCr12). The reported safety factors still leave a comfortable margin.
+- **Ch. 14 — bearing verification**: the calculated life `L_h` = 7032.2 hours is compared in the
+  text against 11,787.94 hours, and the inequality as written (`7032.2 > 11,787.94`) does not hold
+  numerically. Against the brief's required life of `L_h imp` = 12,000 hours, the result indicates
+  that bearing `L_B` on the input shaft needs a higher dynamic capacity.
+- Ch. 6.5 mentions `m_n` = 2.5 mm in the minimum-backlash relation and a centre distance of 180 mm
+  in the tolerance customisation, whereas the rest of the project uses `m_n` = 2 mm and
+  `a_w` = 80 mm.
 
 ---
 
-## Licență
+## 9. References
 
-Lucrare academică publicată în scop de portofoliu. Conținutul poate fi consultat și citat cu
-indicarea autorului; nu este destinat reutilizării comerciale sau depunerii ca lucrare proprie.
+1. Jula, A. et al. — *Organe de mașini*, vol. I, II. University of Brașov, 1986, 1989.
+2. Mogan, Gh. et al. — *Organe de mașini. Teorie – Proiectare – Aplicații*. Transilvania University of Brașov Press, 2012.
+3. Moldovean, Gh. et al. — *Angrenaje cilindrice și conice. Calcul și construcție*. LuxLibris, Brașov, 2001.
+4. Moldovean, Gh. et al. — *Angrenaje cilindrice și conice. Metodici de proiectare*. LuxLibris, Brașov, 2002.
+5. Rădulescu, C. — *Organe de mașini*, vol. I, II, III. Transilvania University of Brașov, 1985.
+6. \*\*\* — *Culegere de norme și extrase din standarde pentru proiectarea elementelor componente ale mașinilor*, vol. I, II. University of Brașov, 1984.
+
+---
+
+## License
+
+Academic work published for portfolio purposes. The content may be read and cited with attribution
+to the author; it is not intended for commercial reuse or for submission as someone else's own work.
