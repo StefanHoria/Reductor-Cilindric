@@ -1,0 +1,19 @@
+# Fisierele CATIA si Office sunt binare - fara conversie de line endings, fara diff textual
+*.CATPart   binary
+*.CATProduct binary
+*.CATDrawing binary
+*.CATProcess binary
+*.cgr       binary
+*.stp       binary
+*.step      binary
+*.igs       binary
+*.pdf       binary
+*.docx      binary
+*.xlsx      binary
+*.xls       binary
+
+# Fisierul MDESIGN este XML UTF-16 - se pastreaza octet cu octet
+*.mdp.txt   binary
+
+*.csv text eol=crlf
+*.md  text eol=lf

@@ -1,0 +1,18 @@
+﻿Modululul normal,m_n,2
+Modulul frontal,m,1.89
+Numarul de dinti,z_1,19
+Profilul de referinta, -,20/1/0.25
+Unghiul de inclinare,beta,14
+Sensul inclinarii, -,Dreapta
+Coeficientul normal al deplasarii de profil,x_n,0.4711
+Coeficientul frontal al deplasarii de profil,x,0.4278
+Lungimea peste N dinti,W/N,
+Diametrul de divizare,d,35.9
+Treapta de precizie si jocul, -,"8, B"
+Distanta dintre axe,a_w,80
+Numar de dinti roata conjugata,z_2,57
+Numar de desen roata conjugata, -,AR1161-00O07
+Toleranta bataii radiale,F_r,0.045
+Toleranta abaterii directiei dintelui,F_b,0.025
+Abaterea minima a cotei peste dinti,E_wms,-0.1
+Toleranta cotei medii peste dinti,T_wm,-0.05

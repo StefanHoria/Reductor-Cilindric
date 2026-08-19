@@ -1,0 +1,20 @@
+# Fisiere temporare CATIA
+CATTemp/
+*.CATPart~
+*.CATProduct~
+*.CATDrawing~
+*.bak
+
+# Windows / OneDrive
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Office temporare
+~$*
+
+# Arhive de lucru
+*.rar
+*.zip
+*.7z
