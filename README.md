@@ -18,6 +18,12 @@ and the detail drawings.
 
 > 🇷🇴 Documentul în limba română: [README.ro.md](README.ro.md)
 
+<p align="center">
+  <img src="docs/img/ansamblu-reductor.png" alt="RCil H reducer — general assembly in CATIA V5" width="560">
+  <br>
+  <sub><i>General assembly of the RCil H reducer on its test-bench frame, modelled in CATIA V5.</i></sub>
+</p>
+
 ---
 
 ## 1. Design brief
@@ -52,6 +58,13 @@ Tooth counts: `z_1` = 19, `z_2` = 57 → recalculated ratio `u` = 3, deviation f
 ---
 
 ## 3. The helical gear pair
+
+<p align="center">
+  <img src="docs/img/angrenaj-cilindric.png" alt="Helical gear pair in mesh" width="440">
+  <br>
+  <sub><i>The gear pair in mesh: pinion <code>z<sub>1</sub></code> = 19 and wheel <code>z<sub>2</sub></code> = 57,
+  helix angle &beta; = 14&deg;, centre distance <code>a<sub>w</sub></code> = 80 mm.</i></sub>
+</p>
 
 ### Material and heat treatment
 
@@ -122,6 +135,17 @@ against the calculated value `ε_α` = **1.381** → deviation **−0.65 %** ✔
 ---
 
 ## 4. Shafts, bearings and keys
+
+<table>
+<tr>
+<td width="50%"><img src="docs/img/subansamblu-arbore-intrare.png" alt="Input shaft subassembly"></td>
+<td width="50%"><img src="docs/img/subansamblu-arbore-iesire.png" alt="Output shaft subassembly"></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Input shaft (A1)</b> — integral pinion, 6205 bearings, &#8960;22 &times; 36 mm shaft end</sub></td>
+<td align="center"><sub><b>Output shaft (A2)</b> — gear wheel, 6213 bearings, &#8960;28 &times; 42 mm shaft end</sub></td>
+</tr>
+</table>
 
 ### Shafts
 
@@ -199,6 +223,7 @@ Service life: `L_B` = (C/P_B)³ = **1265.8 million revolutions** → `L_h` = **7
 .
 ├── cad/        the CATIA V5 models (54 files, names preserved so links do not break)
 ├── docs/       the technical report (PDF + DOCX)
+│   └── img/    screenshots of the models and drawings, used in this README
 ├── date/       component and material lists, gear parameter table
 └── mdesign/    the input shaft verification report
 ```
@@ -255,6 +280,19 @@ ISO 4017 / 4018 bolts and ISO 4032 nuts.
 | `Desen de executie Roata dintata cilindrica.CATDrawing` | Detail drawing — gear wheel |
 | `Desen de executie arbore de iesire.CATDrawing` | Detail drawing — output shaft |
 | `Format si chenar desen de ansamblu.CATDrawing` | Sheet format and border used |
+
+<p align="center">
+  <img src="docs/img/desen-ansamblu.png" alt="Assembly drawing of the reducer" width="720">
+  <br>
+  <sub><i>Assembly drawing — views, sections, technical conditions and the 34-item bill of materials.</i></sub>
+</p>
+
+<p align="center">
+  <img src="docs/img/desen-executie-arbore-iesire.png" alt="Detail drawing of the output shaft" width="720">
+  <br>
+  <sub><i>Detail drawing of the output shaft (C45): dimensions, tolerances, geometric tolerances,
+  surface roughness and heat treatment.</i></sub>
+</p>
 
 ### Data
 

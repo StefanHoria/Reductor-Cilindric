@@ -18,6 +18,12 @@ desenele de execuție.
 
 > 🇬🇧 English version: [README.md](README.md)
 
+<p align="center">
+  <img src="docs/img/ansamblu-reductor.png" alt="Reductorul RCil H — ansamblul general in CATIA V5" width="560">
+  <br>
+  <sub><i>Ansamblul general al reductorului RCil H pe cadrul suport, modelat in CATIA V5.</i></sub>
+</p>
+
 ---
 
 ## 1. Tema de proiectare
@@ -52,6 +58,13 @@ Numere de dinți: `z_1` = 19, `z_2` = 57 → raport recalculat `u` = 3, abatere 
 ---
 
 ## 3. Angrenajul cilindric
+
+<p align="center">
+  <img src="docs/img/angrenaj-cilindric.png" alt="Angrenajul cilindric cu dantura inclinata" width="440">
+  <br>
+  <sub><i>Angrenajul in functionare: pinionul <code>z<sub>1</sub></code> = 19 si roata <code>z<sub>2</sub></code> = 57,
+  unghi de inclinare &beta; = 14&deg;, distanta dintre axe <code>a<sub>w</sub></code> = 80 mm.</i></sub>
+</p>
 
 ### Material și tratament termic
 
@@ -122,6 +135,17 @@ față de valoarea calculată `ε_α` = **1,381** → abatere **−0,65 %** ✔
 ---
 
 ## 4. Arbori, rulmenți și pene
+
+<table>
+<tr>
+<td width="50%"><img src="docs/img/subansamblu-arbore-intrare.png" alt="Subansamblul arborelui de intrare"></td>
+<td width="50%"><img src="docs/img/subansamblu-arbore-iesire.png" alt="Subansamblul arborelui de iesire"></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Arborele de intrare (A1)</b> — pinion corp comun, rulmenti 6205, capat &#8960;22 &times; 36 mm</sub></td>
+<td align="center"><sub><b>Arborele de iesire (A2)</b> — roata dintata, rulmenti 6213, capat &#8960;28 &times; 42 mm</sub></td>
+</tr>
+</table>
 
 ### Arbori
 
@@ -199,6 +223,7 @@ Durabilitate: `L_B` = (C/P_B)³ = **1265,8 milioane de rotații** → `L_h` = **
 .
 ├── cad/        modelele CATIA V5 (54 fișiere, nume păstrate pentru a nu rupe linkurile)
 ├── docs/       memoriul tehnic (PDF + DOCX)
+│   └── img/    capturi ale modelelor și desenelor, folosite în acest README
 ├── date/       liste de componente și materiale, tabelul de parametri ai danturii
 └── mdesign/    raportul de verificare a arborelui de intrare
 ```
@@ -253,6 +278,19 @@ poziționare · șaibe Grower · șuruburi ISO 4017 / 4018 și piulițe ISO 4032
 | `Desen de executie Roata dintata cilindrica.CATDrawing` | Desen de execuție |
 | `Desen de executie arbore de iesire.CATDrawing` | Desen de execuție |
 | `Format si chenar desen de ansamblu.CATDrawing` | Formatul și chenarul folosit |
+
+<p align="center">
+  <img src="docs/img/desen-ansamblu.png" alt="Desenul de ansamblu al reductorului" width="720">
+  <br>
+  <sub><i>Desenul de ansamblu — vederi, sectiuni, conditii tehnice si tabelul de componenta cu 34 de pozitii.</i></sub>
+</p>
+
+<p align="center">
+  <img src="docs/img/desen-executie-arbore-iesire.png" alt="Desenul de executie al arborelui de iesire" width="720">
+  <br>
+  <sub><i>Desen de executie — arborele de iesire (C45): cote, tolerante dimensionale si geometrice,
+  rugozitati si tratament termic.</i></sub>
+</p>
 
 ### Date
 
