@@ -19,7 +19,7 @@ and the detail drawings.
 > 🇷🇴 Documentul în limba română: [README.ro.md](README.ro.md)
 
 <p align="center">
-  <img src="docs/img/ansamblu-reductor.png" alt="RCil H reducer — general assembly in CATIA V5" width="560">
+  <img src="docs/img/ansamblu-reductor.png" alt="RCil H reducer — general assembly in CATIA V5" width="370">
   <br>
   <sub><i>General assembly of the RCil H reducer on its test-bench frame, modelled in CATIA V5.</i></sub>
 </p>
@@ -282,7 +282,7 @@ ISO 4017 / 4018 bolts and ISO 4032 nuts.
 | `Format si chenar desen de ansamblu.CATDrawing` | Sheet format and border used |
 
 <p align="center">
-  <img src="docs/img/desen-ansamblu.png" alt="Assembly drawing of the reducer" width="720">
+  <img src="docs/img/desen-ansamblu.png" alt="Assembly drawing of the reducer" width="618">
   <br>
   <sub><i>Assembly drawing — views, sections, technical conditions and the 34-item bill of materials.</i></sub>
 </p>

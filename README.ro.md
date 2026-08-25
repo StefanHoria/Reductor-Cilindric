@@ -19,7 +19,7 @@ desenele de execuție.
 > 🇬🇧 English version: [README.md](README.md)
 
 <p align="center">
-  <img src="docs/img/ansamblu-reductor.png" alt="Reductorul RCil H — ansamblul general in CATIA V5" width="560">
+  <img src="docs/img/ansamblu-reductor.png" alt="Reductorul RCil H — ansamblul general in CATIA V5" width="370">
   <br>
   <sub><i>Ansamblul general al reductorului RCil H pe cadrul suport, modelat in CATIA V5.</i></sub>
 </p>
@@ -280,7 +280,7 @@ poziționare · șaibe Grower · șuruburi ISO 4017 / 4018 și piulițe ISO 4032
 | `Format si chenar desen de ansamblu.CATDrawing` | Formatul și chenarul folosit |
 
 <p align="center">
-  <img src="docs/img/desen-ansamblu.png" alt="Desenul de ansamblu al reductorului" width="720">
+  <img src="docs/img/desen-ansamblu.png" alt="Desenul de ansamblu al reductorului" width="618">
   <br>
   <sub><i>Desenul de ansamblu — vederi, sectiuni, conditii tehnice si tabelul de componenta cu 34 de pozitii.</i></sub>
 </p>
